@@ -45,7 +45,7 @@ function nextTick(){
             drawSnake();
             checkGameOver();
             nextTick();
-        }, 75);
+        }, 150);
     }
     else{
         displayGameOver();
@@ -144,7 +144,7 @@ function displayGameOver(){
     ctx.font = "65px px Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
-    ctx.fillText("GAME OVER!", gameWidght / 2, gameHeight / 2);
+    ctx.fillText("FIM DE JOGO!", gameWidght / 2, gameHeight / 2);
     running = false;
 };
 function resetGame(){
