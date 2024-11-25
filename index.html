@@ -28,13 +28,36 @@
         border-radius: 15px;
         cursor: pointer;
     }
+    #titulo{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    #formSnakeName{
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    #dif{
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
 </style>
 <body class="bg-light">
+    <div class="mb-3" id="formSnakeName">
+        <label for="snakeName" class="form-label">Digite o nome da cobrinha</label>
+        <input type="text" class="form-control" id="snakeName" placeholder="Nome da cobrinha">
+    </div>
     <div class="container" id="gameContainer">
-        <h1 class="my-4">Jogo da cobrinha</h1>
+        <h1 class="my-4" id="titulo">Jogo da cobrinha</h1>
         <canvas id="gameBoard" width="500" height="500" class="mb-4"></canvas>
         <div id="scoreText" class="mb-3">0</div>
         <button id="resetBtn" class="btn btn-success">Reiniciar o jogo</button>
+    </div>
+    <div class="mb-3" id="dif">
+        <label for="gameLevel" class="form-label">Escolha o nível de velocidade</label>
+        <select class="form-select" id="gameLevel">
+            <option value="easy">Devagar</option>
+            <option value="medium">Normal</option>
+            <option value="hard">Rápido</option>
+        </select>
     </div>
     <script src="javascript.js"></script>
 </body>

@@ -6,10 +6,10 @@ const resetBtn = document.querySelector("#resetBtn");
 const gameWidght = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground = "white";
-const snakeColor = "lightgreen";
+const snakeColor = "green";
 const snakeBoarder = "black";
 const foodColor = "red";
-const unitSize = 25;
+const unitSize = 35;
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -26,6 +26,7 @@ let snake = [
 
 window.addEventListener("keydown", changeDirection);
 resetBtn.addEventListener("click", resetGame);
+document.querySelector("#playerForm").addEventListener("submit", saveScore);
 
 gameStart();
 
@@ -151,9 +152,7 @@ function resetGame(){
     score = 0;
     xVelocity = unitSize;
     yVelocity = 0;
-    snake = [
-        {x:unitSize * 4, y:0},
-        {x:unitSize * 3, y:0},
+    snake = [   
         {x:unitSize * 2, y:0},
         {x:unitSize, y:0},
         {x:0, y:0}
